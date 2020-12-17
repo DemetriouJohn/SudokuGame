@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System;
 using Random = UnityEngine.Random;
 public class GameGrid : MonoBehaviour
 {
@@ -37,8 +34,8 @@ public class GameGrid : MonoBehaviour
         {
             for (int column = 0; column < Columns; column++)
             {
-                var square = Instantiate(GridSquareObject) as GameObject;
-                square.transform.parent = this.transform;
+                var square = Instantiate(GridSquareObject);
+                square.transform.SetParent(transform);
                 square.transform.localScale = new Vector3(SquareScale, SquareScale, SquareScale);
                 GridSquareObjects.Add(square);
             }
@@ -72,7 +69,7 @@ public class GameGrid : MonoBehaviour
                 rowNum++;
                 columnNum = 0;
             }
-            
+
             var posXOffset = offset.x * columnNum;
             var posYOffset = offset.y * rowNum;
             square.GetComponent<RectTransform>().anchoredPosition = new Vector2(StartPosition.x + posXOffset, StartPosition.y - posYOffset);
