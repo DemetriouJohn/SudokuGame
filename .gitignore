@@ -62,3 +62,4 @@ crashlytics-build.properties
 /Sudoku/Temp/
 /Sudoku/Library/
 /Sudoku/Logs/
+/Sudoku/obj/Debug/
