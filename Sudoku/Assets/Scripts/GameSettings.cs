@@ -1,31 +1,29 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameSettings : MonoBehaviour
 {
-    public GameSettings Instance { get; private set; }
+    private SudokuData _gameData;
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(this);
-            return;
-        }
-
         DontDestroyOnLoad(this);
-        Instance = this;
+        _gameData = new SudokuData();
     }
 
-    private GameMode _gameMode;
+    private GameMode _gameDifficulty;
 
     public void SetGameMode(GameMode mode)
     {
-        _gameMode = mode;
+        _gameDifficulty = mode;
     }
 
-    public string GetGameMode()
+    public GameMode GetGameMode()
     {
-        return _gameMode.ToString();
+        return _gameDifficulty;
+    }
+
+    internal SudokuBoard GetLevel()
+    {
+        return _gameData.SudokuBoards[_gameDifficulty][0];
     }
 }

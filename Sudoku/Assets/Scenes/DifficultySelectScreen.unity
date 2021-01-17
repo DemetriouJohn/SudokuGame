@@ -451,7 +451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 559545221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1920731981}
+        m_TargetAssemblyTypeName: DifficultySelection, Assembly-CSharp
+        m_MethodName: DifficultySelectButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &559545221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642433486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1920731981}
+        m_TargetAssemblyTypeName: DifficultySelection, Assembly-CSharp
+        m_MethodName: DifficultySelectButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642433486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +715,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818855481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1920731981}
+        m_TargetAssemblyTypeName: DifficultySelection, Assembly-CSharp
+        m_MethodName: DifficultySelectButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818855481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +1007,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1635049752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1920731981}
+        m_TargetAssemblyTypeName: DifficultySelection, Assembly-CSharp
+        m_MethodName: DifficultySelectButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1635049752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,6 +1148,7 @@ GameObject:
   - component: {fileID: 1920731980}
   - component: {fileID: 1920731979}
   - component: {fileID: 1920731978}
+  - component: {fileID: 1920731981}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1172,3 +1221,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920731981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920731977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b9367d2eaec784694096d89a893a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

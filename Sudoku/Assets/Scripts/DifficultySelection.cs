@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DifficultySelection : MonoBehaviour
 {
@@ -9,5 +8,11 @@ public class DifficultySelection : MonoBehaviour
     private void Awake()
     {
         _gameSettings = FindObjectOfType<GameSettings>();
+    }
+
+    public void DifficultySelectButtonClick(int difficulty)
+    {
+        _gameSettings.SetGameMode((GameMode)difficulty);
+        SceneManager.LoadScene("GameScene");
     }
 }

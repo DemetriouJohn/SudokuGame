@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 public class GameGrid : MonoBehaviour
 {
     public int Columns = 0;
@@ -11,7 +10,12 @@ public class GameGrid : MonoBehaviour
     public float SquareScale = 1f;
 
     private List<GameObject> GridSquareObjects = new List<GameObject>();
-    private int selectedGridData = -1;
+    private GameSettings _gameSettings;
+
+    private void Awake()
+    {
+        _gameSettings = FindObjectOfType<GameSettings>();
+    }
 
     private void Start()
     {
@@ -21,7 +25,7 @@ public class GameGrid : MonoBehaviour
         }
 
         CreateGrid();
-        SetGridNumbers("Easy");
+        SetGridNumbers();
     }
 
     private void CreateGrid()
@@ -44,10 +48,9 @@ public class GameGrid : MonoBehaviour
         }
     }
 
-    private void SetGridNumbers(string level)
+    private void SetGridNumbers()
     {
-        selectedGridData = Random.Range(0, SudokuData.instance.SudokuBoards[level].Count);
-        var data = SudokuData.instance.SudokuBoards[level][selectedGridData];
+        var data = _gameSettings.GetLevel();
         for (var i = 0; i < GridSquareObjects.Count; i++)
         {
             GridSquareObjects[i].GetComponent<GridSquare>().SetNumber(data.UnsolvedData[i]);
