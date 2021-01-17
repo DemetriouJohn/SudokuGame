@@ -36,11 +36,14 @@ public class GameGrid : MonoBehaviour
 
     private void SpawnGridSquares()
     {
+        byte index = 0;
         for (int row = 0; row < Rows; row++)
         {
             for (int column = 0; column < Columns; column++)
             {
                 var square = Instantiate(GridSquareObject);
+                square.GetComponent<GridSquare>().SetSquareIndex(index);
+                index++;
                 square.transform.SetParent(transform);
                 square.transform.localScale = new Vector3(SquareScale, SquareScale, SquareScale);
                 GridSquareObjects.Add(square);
